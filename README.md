@@ -1,6 +1,6 @@
 ## Some neat packages I have
 - mesa-9999 with support for llvm 9-12 (modified from https://gitlab.com/Perfect_Gentleman/PG_Overlay)
-
+- polly for llvm 11.0.0.9999 (modified from https://gitlab.com/Perfect_Gentleman/PG_Overlay)
 
 ## How to add my overlay
 Simply run:
