@@ -2,7 +2,7 @@
 - mesa-9999 with support for llvm 9-12 (modified from https://gitlab.com/Perfect_Gentleman/PG_Overlay)
 - polly for llvm 11.0.0.9999 (modified from https://gitlab.com/Perfect_Gentleman/PG_Overlay)
 - updated discord-canary-bin package
-
+- updated firefox with llvm 11 and llvm 12 support
 
 ## How to add my overlay
 Simply run:
