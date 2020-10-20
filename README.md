@@ -5,6 +5,7 @@
 - Updated sys-kernel/raspberrypi-sources package for branches 5.5.y, 5.6.y, 5.7.y, 5.8.y, and 5.9.y
 - Lowdown package
 - Updated glib-networking and webkit-gtk from lanodanOverlay sans the lua overlay
+- Servo webengine (www-client/servo)
 
 ## How to add my overlay
 Simply run:
