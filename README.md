@@ -6,7 +6,7 @@
 - Lowdown package
 - Updated glib-networking and webkit-gtk from lanodanOverlay sans the lua overlay
 - Servo webengine (www-client/servo) Note, you have to have `FEATURES="-network-sandbox"`
-- x11-libs/gtk+ to version 3.99.3 (modified from lanodanOverlay)
+- updated x11-libs/gtk+ (modified from lanodanOverlay)
 
 ## How to add my overlay
 Simply run:
