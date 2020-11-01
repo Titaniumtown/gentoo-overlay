@@ -14,4 +14,4 @@ Simply run:
 $ mkdir -p -- /etc/portage/repos.conf
 $ wget "https://raw.github.com/titaniumtown/gentoo-overlay/master/repos.conf" -O /etc/portage/repos.conf/titaniumtown-overlay.conf
 ```
-Then do emerge --sync to fetch my packages!
+Then do `emerge --sync titaniumtown-overlay` to fetch my packages!
