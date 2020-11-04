@@ -8,6 +8,7 @@
 - Servo webengine (www-client/servo) Note, you have to have `FEATURES="-network-sandbox"`
 - Updated x11-libs/gtk+ (modified from lanodanOverlay)
 - Updated opencl-clang and spirv-llvm-translator for llvm 11
+- Updated intel-graphics-compiler and intel-neo
 
 ## How to add my overlay
 Simply run:
