@@ -16,7 +16,7 @@ HOMEPAGE="https://github.com/KhronosGroup/SPIRV-LLVM-Translator"
 SRC_URI="https://github.com/KhronosGroup/${MY_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="UoI-NCSA"
-SLOT="10"
+SLOT="11"
 KEYWORDS="~amd64"
 IUSE="test tools"
 
