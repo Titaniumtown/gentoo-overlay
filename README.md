@@ -9,6 +9,8 @@
 - Updated x11-libs/gtk+ (modified from lanodanOverlay)
 - Updated opencl-clang and spirv-llvm-translator for llvm 11
 - Updated intel-graphics-compiler and intel-neo
+- updated sys-kernel/ck-sources
+- sci-libs/tensorflow without google-cloud-cpp
 
 ## How to add my overlay
 Simply run:
