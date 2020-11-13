@@ -32,8 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	GOVARS="-X github.com/zyedidia/micro/v2/internal/util.Version=${PV}
-		-X github.com/zyedidia/micro/v2/internal/util.CommitHash=${PV}
+	GOVARS="-X github.com/zyedidia/micro/v2/internal/util.CommitHash=${PV}
 		-X github.com/zyedidia/micro/v2/internal/util.CompileDate=$(date +%F)
 		$(usex debug '-X github.com/zyedidia/micro/v2/internal/util.Debug=ON' '' '' '')"
 	go build -ldflags "-s -w -${GOVARS}" ./cmd/micro || die "build failed"
