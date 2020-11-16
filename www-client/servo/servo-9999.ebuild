@@ -12,7 +12,7 @@ EGIT_REPO_URI="https://github.com/servo/servo.git"
 
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="net-misc/curl media-libs/freeglut media-libs/freetype media-libs/mesa dev-util/gperf dev-python/virtualenv dev-python/pip dev-libs/openssl x11-libs/libXmu media-libs/glu x11-base/xorg-server dev-python/virtualenv dev-python/pip"
