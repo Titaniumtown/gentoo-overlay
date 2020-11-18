@@ -26,12 +26,10 @@ done
 # distfiles that bazel uses for the workspace, will be copied to basel-distdir
 bazel_external_uris="
 	https://github.com/petewarden/OouraFFT/archive/v1.0.tar.gz -> OouraFFT-v1.0.tar.gz
-	https://gitlab.com/libeigen/eigen/-/archive/386d809bde475c65b7940f290efe80e6a05878c4/eigen-386d809bde475c65b7940f290efe80e6a05878c4.tar.gz
+	https://gitlab.com/libeigen/eigen/-/archive/011e0db31d1bed8b7f73662be6d57d9f30fa457a/eigen-011e0db31d1bed8b7f73662be6d57d9f30fa457a.tar.gz
 	https://github.com/abseil/abseil-cpp/archive/df3ea785d8c30a9503321a3d35ee7d35808f190d.tar.gz -> abseil-cpp-df3ea785d8c30a9503321a3d35ee7d35808f190d.tar.gz
 	https://github.com/bazelbuild/bazel-skylib/releases/download/0.9.0/bazel_skylib-0.9.0.tar.gz
-	https://github.com/bazelbuild/rules_apple/archive/5131f3d46794bf227d296c82f30c2499c9de3c5b.tar.gz -> bazelbuild-rules_apple-5131f3d46794bf227d296c82f30c2499c9de3c5b.tar.gz
 	https://github.com/bazelbuild/rules_android/archive/v0.1.1.zip -> bazelbuild-rules_android-v0.1.1.zip
-	https://github.com/bazelbuild/apple_support/archive/501b4afb27745c4813a88ffa28acd901408014e4.tar.gz -> bazelbuild-apple_support-501b4afb27745c4813a88ffa28acd901408014e4.tar.gz
 	https://github.com/bazelbuild/bazel-toolchains/archive/92dd8a7a518a2fb7ba992d47c8b38299fe0be825.tar.gz -> bazel-toolchains-92dd8a7a518a2fb7ba992d47c8b38299fe0be825.tar.gz
 	https://github.com/bazelbuild/rules_cc/archive/01d4a48911d5e7591ecb1c06d3b8af47fe872371.zip -> bazelbuild-rules_cc-01d4a48911d5e7591ecb1c06d3b8af47fe872371.zip
 	https://github.com/bazelbuild/rules_closure/archive/308b05b2419edb5c8ee0471b67a40403df940149.tar.gz -> bazelbuild-rules_closure-308b05b2419edb5c8ee0471b67a40403df940149.tar.gz
@@ -46,14 +44,14 @@ bazel_external_uris="
 	https://github.com/google/highwayhash/archive/fd3d9af80465e4383162e4a7c5e2f406e82dd968.tar.gz -> highwayhash-fd3d9af80465e4383162e4a7c5e2f406e82dd968.tar.gz
 	https://github.com/google/re2/archive/506cfa4bffd060c06ec338ce50ea3468daa6c814.tar.gz -> re2-506cfa4bffd060c06ec338ce50ea3468daa6c814.tar.gz
 	https://github.com/joe-kuo/sobol_data/archive/835a7d7b1ee3bc83e575e302a985c66ec4b65249.tar.gz -> sobol_data-835a7d7b1ee3bc83e575e302a985c66ec4b65249.tar.gz
-	https://github.com/llvm/llvm-project/archive/7e825abd5704ce28b166f9463d4bd304348fd2a9.tar.gz -> llvm-7e825abd5704ce28b166f9463d4bd304348fd2a9.tar.gz
+	https://github.com/llvm/llvm-project/archive/f402e682d0ef5598eeffc9a21a691b03e602ff58.tar.gz -> llvm-f402e682d0ef5598eeffc9a21a691b03e602ff58.tar.gz
 	https://github.com/mborgerding/kissfft/archive/36dbc057604f00aacfc0288ddad57e3b21cfc1b8.tar.gz -> kissfft-36dbc057604f00aacfc0288ddad57e3b21cfc1b8.tar.gz
-	https://github.com/google/ruy/archive/34ea9f4993955fa1ff4eb58e504421806b7f2e8f.zip -> ruy-34ea9f4993955fa1ff4eb58e504421806b7f2e8f.zip
+	https://github.com/google/ruy/archive/5bb02fbf90824c2eb6cd7418f766c593106a332b.zip -> ruy-5bb02fbf90824c2eb6cd7418f766c593106a332b.zip
 	https://github.com/pytorch/cpuinfo/archive/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz -> pytorch-cpuinfo-d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz
 	https://github.com/pytorch/cpuinfo/archive/6cecd15784fcb6c5c0aa7311c6248879ce2cb8b2.zip -> pytorch-cpuinfo-6cecd15784fcb6c5c0aa7311c6248879ce2cb8b2.zip
 	cuda? (
-		https://github.com/nvidia/nccl/archive/5949d96f36d050e59d05872f8bbffd2549318e95.tar.gz -> nvidia-nccl-5949d96f36d050e59d05872f8bbffd2549318e95.tar.gz
-		https://github.com/NVlabs/cub/archive/1.8.0.zip -> cub-1.8.0.zip
+		https://github.com/nvidia/nccl/archive/195232556936b39b01cc908296e1650b80d4a3e9.tar.gz -> nvidia-nccl-195232556936b39b01cc908296e1650b80d4a3e9.tar.gz
+		https://github.com/NVlabs/cub/archive/1.9.9.zip -> cub-1.9.9.zip
 	)
 	python? (
 		https://github.com/intel/ARM_NEON_2_x86_SSE/archive/1200fe90bb174a6224a525ee60148671a786a71f.tar.gz -> ARM_NEON_2_x86_SSE-1200fe90bb174a6224a525ee60148671a786a71f.tar.gz
@@ -75,7 +73,7 @@ RDEPEND="
 	dev-libs/libpcre
 	dev-libs/nsync
 	dev-libs/openssl:0=
-	>=dev-libs/protobuf-3.8.0:=
+	>=dev-libs/protobuf-3.13.0:=
 	>=dev-libs/re2-0.2019.06.01:=
 	media-libs/giflib
 	media-libs/libjpeg-turbo
@@ -86,8 +84,10 @@ RDEPEND="
 	>=sys-apps/hwloc-2
 	cuda? (
 		|| (
-		        ( =dev-util/nvidia-cuda-toolkit-10.2*[profiler] =dev-libs/cudnn-7* )
-		        ( =dev-util/nvidia-cuda-toolkit-10.1*[profiler] =dev-libs/cudnn-7* )
+		        ( =dev-util/nvidia-cuda-toolkit-11.1*[profiler] =dev-libs/cudnn-8* )
+		        ( =dev-util/nvidia-cuda-toolkit-11.0*[profiler] =dev-libs/cudnn-8* )
+		        ( =dev-util/nvidia-cuda-toolkit-10.2*[profiler] >=dev-libs/cudnn-7.6 )
+		        ( =dev-util/nvidia-cuda-toolkit-10.1*[profiler] >=dev-libs/cudnn-7.5 )
 		        ( =dev-util/nvidia-cuda-toolkit-10.0*[profiler] =dev-libs/cudnn-7.4* )
 		        ( =dev-util/nvidia-cuda-toolkit-9.2*[profiler] =dev-libs/cudnn-7.1* )
 		        ( =dev-util/nvidia-cuda-toolkit-9.1*[profiler] =dev-libs/cudnn-7.0* )
@@ -100,22 +100,24 @@ RDEPEND="
 		dev-python/absl-py[${PYTHON_USEDEP}]
 		>=dev-python/astor-0.7.1[${PYTHON_USEDEP}]
 		dev-python/astunparse[${PYTHON_USEDEP}]
+		dev-python/dill[${PYTHON_USEDEP}]
+		dev-python/flatbuffers[${PYTHON_USEDEP}]
 		>=dev-python/gast-0.3.3[${PYTHON_USEDEP}]
 		dev-python/h5py[${PYTHON_USEDEP}]
 		>=dev-python/numpy-1.19[${PYTHON_USEDEP}]
 		>=dev-python/google-pasta-0.1.8[${PYTHON_USEDEP}]
-		dev-python/opt-einsum[${PYTHON_USEDEP}]
-		>=dev-python/protobuf-python-3.8.0[${PYTHON_USEDEP}]
+		>=dev-python/opt-einsum-3.3.0[${PYTHON_USEDEP}]
+		>=dev-python/protobuf-python-3.13.0[${PYTHON_USEDEP}]
 		dev-python/pybind11[${PYTHON_USEDEP}]
 		dev-python/six[${PYTHON_USEDEP}]
+		dev-python/tblib[${PYTHON_USEDEP}]
 		dev-python/termcolor[${PYTHON_USEDEP}]
+		dev-python/typing-extensions[${PYTHON_USEDEP}]
 		>=dev-python/grpcio-1.28[${PYTHON_USEDEP}]
 		>=dev-python/wrapt-1.11.1[${PYTHON_USEDEP}]
 		>=sci-libs/keras-applications-1.0.8[${PYTHON_USEDEP}]
-		>=sci-libs/keras-preprocessing-1.1.0[${PYTHON_USEDEP}]
+		>=sci-libs/keras-preprocessing-1.1.2[${PYTHON_USEDEP}]
 		>=sci-visualization/tensorboard-2.3.0[${PYTHON_USEDEP}]
-		dev-python/dill[${PYTHON_USEDEP}]
-		dev-python/tblib[${PYTHON_USEDEP}]
 	)"
 DEPEND="${RDEPEND}
 	python? (
@@ -123,13 +125,12 @@ DEPEND="${RDEPEND}
 		dev-python/setuptools
 	)"
 PDEPEND="python? (
-		>=sci-libs/tensorflow-estimator-2.3.0[${PYTHON_USEDEP}]
+		>=sci-libs/tensorflow-estimator-2.4.0_rc0[${PYTHON_USEDEP}]
 	)"
 BDEPEND="
 	app-arch/unzip
 	>=dev-libs/protobuf-3.8.0
 	dev-java/java-config
-	dev-lang/swig
 	=dev-util/bazel-3*
 	cuda? (
 		>=dev-util/nvidia-cuda-toolkit-9.1[profiler]
@@ -291,9 +292,9 @@ src_configure() {
 			pybind11
 			six_archive
 			snappy
-			swig
 			tblib_archive
 			termcolor_archive
+			typing_extensions_archive
 			wrapt
 			zlib
 		)
@@ -304,7 +305,7 @@ src_configure() {
 		# This is not autoconf
 		./configure || die
 
-		echo 'build --config=noaws --config=nohdfs --config=nogcp' >> .bazelrc || die
+		echo 'build --config=v2 --config=mkl --config=noaws --config=nohdfs --config=nogcp' >> .bazelrc || die
 		echo 'build --define tensorflow_mkldnn_contraction_kernel=0' >> .bazelrc || die
 
 		for cflag in $(pkg-config jsoncpp --cflags)
