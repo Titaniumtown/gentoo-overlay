@@ -8,7 +8,6 @@
 - Servo webengine (www-client/servo) Note, you have to have `FEATURES="-network-sandbox"`
 - Updated opencl-clang and spirv-llvm-translator for llvm 11
 - Updated intel-graphics-compiler and intel-neo
-- updated sys-kernel/ck-sources
 - sci-libs/tensorflow without google-cloud-cpp
 - media-video/pipewire-9999
 
