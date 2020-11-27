@@ -10,6 +10,7 @@
 - Updated intel-graphics-compiler and intel-neo
 - updated sys-kernel/ck-sources
 - sci-libs/tensorflow without google-cloud-cpp
+- media-video/pipewire-9999
 
 ## How to add my overlay
 Simply run:
