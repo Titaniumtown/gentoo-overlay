@@ -108,7 +108,6 @@ RESTRICT+=" test"
 
 src_prepare() {
 	ecm_src_prepare
-	use multimedia || eapply "${FILESDIR}/kwin-5.16.80-gstreamer-optional.patch"
 }
 
 src_configure() {
