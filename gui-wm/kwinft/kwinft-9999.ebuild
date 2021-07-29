@@ -115,7 +115,6 @@ PDEPEND="
 
 src_prepare() {
 	ecm_src_prepare
-	use multimedia || eapply "${FILESDIR}/${PN}-5.21.80-gstreamer-optional.patch"
 
 	# TODO: try to get a build switch upstreamed
 	if ! use screencast; then
