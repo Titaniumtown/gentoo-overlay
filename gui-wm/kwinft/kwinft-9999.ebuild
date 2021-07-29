@@ -5,23 +5,17 @@ EAPI=7
 
 ECM_HANDBOOK="optional"
 ECM_TEST="optional"
-KFMIN=5.82.0
+KFMIN=9999
 PVCUT=$(ver_cut 1-3)
 QTMIN=5.15.2
 VIRTUALX_REQUIRED="test"
 inherit ecm kde.org optfeature
 
-if [[ ${PV} = *9999* ]]; then
-	if [[ ${PV} != 9999 ]]; then
-		EGIT_BRANCH="Plasma/$(ver_cut 1-2)"
-	fi
-	EGIT_REPO_URI="https://gitlab.com/${PN}/${PN}.git"
-	inherit git-r3
-else
-	SRC_URI="https://gitlab.com/${PN}/${PN}/-/archive/${P/-/@}/${PN}-${P/-/@}.tar.gz"
-	S="${WORKDIR}/${PN}-${P/-/@}"
-	KEYWORDS="~amd64"
+if [[ ${PV} != 9999 ]]; then
+	EGIT_BRANCH="Plasma/$(ver_cut 1-2)"
 fi
+EGIT_REPO_URI="https://gitlab.com/${PN}/${PN}.git"
+inherit git-r3
 
 DESCRIPTION="Wayland compositor and X11 window manager forked from KWin"
 HOMEPAGE="https://gitlab.com/kwinft/kwinft"
