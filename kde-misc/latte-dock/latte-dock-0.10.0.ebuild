@@ -55,4 +55,3 @@ RDEPEND="${DEPEND}
 
 DOCS=( CHANGELOG.md README.md )
 
-PATCHES=( "${FILESDIR}/${PN}-0.9.11-kwindowsystem-5.82.patch" ) # bug 790185
