@@ -11,6 +11,9 @@
 # This eclass is DEPRECATED. Please use python-r1, python-single-r1
 # or python-any-r1 instead.
 
+EAPI=7
+
+
 if [[ ${_PYTHON_UTILS_R1} ]]; then
 	die 'python.eclass can not be used with python-r1 suite eclasses.'
 fi
