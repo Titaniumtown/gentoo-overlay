@@ -21,7 +21,7 @@ if [[ -z "${_PYTHON_ECLASS_INHERITED}" ]]; then
 fi
 
 # Export pkg_setup every time to avoid issues with eclass inheritance order.
-if ! has "${EAPI:-0}" 0 1 2 3 || { has "${EAPI:-0}" 2 3 && [[ -n "${PYTHON_USE_WITH}" || -n "${PYTHON_USE_WITH_OR}" ]]; }; then
+if ! has "${EAPI:-0}" 0 1 2 3 4 5 6 7 || { has "${EAPI:-0}" 2 3 && [[ -n "${PYTHON_USE_WITH}" || -n "${PYTHON_USE_WITH_OR}" ]]; }; then
 	EXPORT_FUNCTIONS pkg_setup
 fi
 

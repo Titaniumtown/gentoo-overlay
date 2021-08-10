@@ -19,7 +19,7 @@ _EUTILS_ECLASS=1
 
 inherit multilib toolchain-funcs
 
-if has "${EAPI:-0}" 0 1 2; then
+if has "${EAPI:-0}" 0 1 2 3 4 5 6 7; then
 
 # @FUNCTION: epause
 # @USAGE: [seconds]
