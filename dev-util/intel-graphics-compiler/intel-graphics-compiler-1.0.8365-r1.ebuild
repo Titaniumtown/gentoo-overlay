@@ -4,7 +4,7 @@
 EAPI=7
 
 CMAKE_BUILD_TYPE="Release"
-LLVM_MAX_SLOT="10"
+LLVM_MAX_SLOT="12"
 MY_PN="igc"
 MY_P="${MY_PN}-${PV}"
 PYTHON_COMPAT=( python3_{8..10} )
@@ -22,8 +22,8 @@ KEYWORDS="~amd64"
 IUSE="debug"
 
 DEPEND="
-	>=dev-libs/opencl-clang-${LLVM_MAX_SLOT}
-	>=sys-devel/llvm-${LLVM_MAX_SLOT}
+	dev-libs/opencl-clang:${LLVM_MAX_SLOT}=
+	sys-devel/llvm:${LLVM_MAX_SLOT}=
 "
 
 RDEPEND="${DEPEND}"
