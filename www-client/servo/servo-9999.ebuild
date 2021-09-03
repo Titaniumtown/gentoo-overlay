@@ -20,6 +20,18 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 
+pkg_setup() {
+	if has network-sandbox "$FEATURES"; then
+		eerror
+		eerror "This ebuild requires that FEATURE 'network-sandbox' be disabled."
+		eerror
+		einfo
+		einfo "See: <https://wiki.gentoo.org/wiki//etc/portage/package.env>"
+		einfo
+		die "FEATURE 'network-sandbox' is enabled"
+	fi
+}
+
 src_compile() {
 	cd "servo-9999"
 	#python3 ./mach build --release
