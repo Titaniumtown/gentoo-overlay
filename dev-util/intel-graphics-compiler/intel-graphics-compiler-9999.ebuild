@@ -40,14 +40,6 @@ BDEPEND="
 	>=sys-devel/lld-${LLVM_MAX_SLOT}
 "
 
-PATCHES=(
-	"${FILESDIR}/${PN}-1.0.9-no_Werror.patch"
-	"${FILESDIR}/${PN}-1.0.8173-opencl-clang_version.patch"
-	"${FILESDIR}/${PN}-1.0.8365-disable-git.patch"
-	"${FILESDIR}/${PN}-1.0.8365-cmake-project.patch"
-	"${FILESDIR}/${PN}-1.0.8365-cmake-minimum-version.patch"
-)
-
 pkg_setup() {
 	llvm_pkg_setup
 	python-any-r1_pkg_setup
