@@ -152,18 +152,19 @@ diff --git a/IGC/Compiler/Optimizer/OpenCLPasses/WIFuncs/WIFuncResolution.cpp b/
  #include "common/LLVMWarningsPop.hpp"
  #include "Probe/Assertion.h"
  #include <llvmWrapper/Support/Alignment.h>
-diff --git a/IGC/DebugInfo/DebugInfoUtils.hpp b/IGC/DebugInfo/DebugInfoUtils.hpp
---- a/IGC/DebugInfo/DebugInfoUtils.hpp
-+++ b/IGC/DebugInfo/DebugInfoUtils.hpp
-@@ -92,7 +92,7 @@ namespace IGC
-                 IGCLLVM::DIBuilder Builder(M);
-                 llvm::DIGlobalVariable* GV = GVs[j]->getVariable();
-                 llvm::DIScope* scopeToUse = GV->getScope();
--                llvm::DILocation* locToUse = llvm::DebugLoc::get(GV->getLine(), 0, scopeToUse, loc);
-+                llvm::DILocation* locToUse = llvm::DILocation::get(scopeToUse->getContext(), GV->getLine(), 0, scopeToUse, loc);
-                 if (llvm::isa<llvm::DICompileUnit>(GV->getScope()))
-                 {
-                     // Function has no DebugLoc so it is either internal
+diff --git a/IGC/Compiler/DebugInfo/Utils.cpp b/IGC/Compiler/DebugInfo/Utils.cpp
+--- a/IGC/Compiler/DebugInfo/Utils.cpp
++++ b/IGC/Compiler/DebugInfo/Utils.cpp
+@@ -86,7 +86,7 @@ namespace Utils {
+             IGCLLVM::DIBuilder Builder(M);
+             llvm::DIGlobalVariable* GV = GVs[j]->getVariable();
+             llvm::DIScope* scopeToUse = GV->getScope();
+-            llvm::DILocation* locToUse = llvm::DebugLoc::get(GV->getLine(), 0, scopeToUse, loc);
++            llvm::DILocation* locToUse = llvm::DILocation::get(scopeToUse->getContext(), GV->getLine(), 0, scopeToUse, loc);
+             if (llvm::isa<llvm::DICompileUnit>(GV->getScope()))
+             {
+                 // Function has no DebugLoc so it is either internal
+
 diff --git a/IGC/DebugInfo/DwarfDebug.cpp b/IGC/DebugInfo/DwarfDebug.cpp
 --- a/IGC/DebugInfo/DwarfDebug.cpp
 +++ b/IGC/DebugInfo/DwarfDebug.cpp

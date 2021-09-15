@@ -41,6 +41,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.0.8365-cmake-project.patch"
 	"${FILESDIR}/${PN}-1.0.8365-cmake-minimum-version.patch"
 	"${FILESDIR}/${PN}-1.0.8517-llvm12-porting.patch"
+	"${FILESDIR}/${PN}-1.0.8517-InstCombine-fix.patch"
 )
 
 pkg_setup() {
