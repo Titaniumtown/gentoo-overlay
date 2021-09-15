@@ -50,6 +50,8 @@ src_configure() {
 		-DDISABLE_LIBVA="$(usex !vaapi)"
 		-DKHRONOS_GL_HEADERS_DIR="${ESYSROOT}/usr/include"
 		-DOCL_ICD_VENDORDIR="${EPREFIX}/etc/OpenCL/vendors"
+		-DCMAKE_BUILD_TYPE=Release
+		-Wno-dev
 
 		# If enabled, tests are automatically run during
 		# the compile phase and we cannot run them because
