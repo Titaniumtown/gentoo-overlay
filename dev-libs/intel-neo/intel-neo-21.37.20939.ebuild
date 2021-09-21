@@ -21,8 +21,8 @@ IUSE="+l0 +vaapi"
 RDEPEND="
 	dev-libs/libnl:3
 	dev-libs/libxml2:2
-	>=dev-util/intel-graphics-compiler-1.0.8365
-	dev-util/intel-graphics-system-controller
+	>=dev-util/intel-graphics-compiler-1.0.8517-r1
+	>=dev-util/intel-graphics-system-controller-0.2.3
 	>=media-libs/gmmlib-21.2.1
 	>=virtual/opencl-3
 	l0? ( >=dev-libs/level-zero-1.4.1 )
@@ -50,8 +50,6 @@ src_configure() {
 		-DDISABLE_LIBVA="$(usex !vaapi)"
 		-DKHRONOS_GL_HEADERS_DIR="${ESYSROOT}/usr/include"
 		-DOCL_ICD_VENDORDIR="${EPREFIX}/etc/OpenCL/vendors"
-		-DCMAKE_BUILD_TYPE=Release
-		-Wno-dev
 
 		# If enabled, tests are automatically run during
 		# the compile phase and we cannot run them because
