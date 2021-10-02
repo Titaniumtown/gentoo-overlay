@@ -65,6 +65,7 @@ src_configure() {
 		-DIGC_OPTION__LLDELF_H_DIR="${EPREFIX}/usr/include/lld/Common"
 		-DIGC_OPTION__LLVM_MODE="Prebuilds"
 		-DIGC_OPTION__LLVM_PREFERRED_VERSION="${llvm_version##*-}"
+		-DIGC_OPTION__FORCE_SYSTEM_LLVM=ON
 
 		# VectorCompiler needs work, as at the moment upstream
 		# only supports building vc-intrinsics in place.
