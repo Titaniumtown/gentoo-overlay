@@ -69,7 +69,6 @@ src_configure() {
 		# VectorCompiler needs work, as at the moment upstream
 		# only supports building vc-intrinsics in place.
 		-DIGC_BUILD__VC_ENABLED="NO"
-		-DIGC_OPTION__LLVM_LLD="NO"
 
 		# This will suspress some CMake warnings,
 		# which cannot be fixed at the moment.
