@@ -22,8 +22,8 @@ KEYWORDS="~amd64"
 IUSE="debug"
 
 DEPEND="
-	dev-libs/opencl-clang:${LLVM_MAX_SLOT}=
-	sys-devel/llvm:${LLVM_MAX_SLOT}=
+	>=dev-libs/opencl-clang-${LLVM_MAX_SLOT}
+	>=sys-devel/llvm-${LLVM_MAX_SLOT}
 "
 
 RDEPEND="${DEPEND}"
@@ -38,6 +38,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.0.8173-opencl-clang_version.patch"
 	"${FILESDIR}/${PN}-1.0.8365-disable-git.patch"
 	"${FILESDIR}/${PN}-1.0.8365-cmake-project.patch"
+	"${FILESDIR}/${PN}-1.0.8744-fix-llvm_deps.patch"
 )
 
 pkg_setup() {

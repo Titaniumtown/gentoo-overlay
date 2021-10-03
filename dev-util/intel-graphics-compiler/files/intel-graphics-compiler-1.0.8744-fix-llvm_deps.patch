@@ -1,0 +1,24 @@
+diff --git a/external/llvm/llvm_deps.cmake b/external/llvm/llvm_deps.cmake
+--- a/external/llvm/llvm_deps.cmake
++++ b/external/llvm/llvm_deps.cmake
+@@ -41,17 +41,6 @@ include(llvm_clang_source_hook)
+ # SPIRV translator source hook.
+ include(llvm_spirv_source_hook)
+ 
+-# LLD source hook.
+-if(IGC_OPTION__LLVM_LLD)
+-  include(llvm_lld_source_hook)
+-  if(NOT EXISTS "${IGC_LLVM_WORKSPACE_SRC}/libunwind/include/mach-o" AND ${IGC_OPTION__LLVM_PREFERRED_VERSION} GREATER_EQUAL "12.0.0")
+-    # Need to copy one header from unwind package for LLD (only for building from sources)
+-    file(MAKE_DIRECTORY ${IGC_LLVM_WORKSPACE_SRC}/libunwind/include/mach-o)
+-    file(COPY ${DEFAULT_IGC_LLVM_SOURCES_DIR}/libunwind/include/mach-o/compact_unwind_encoding.h
+-         DESTINATION ${IGC_LLVM_WORKSPACE_SRC}/libunwind/include/mach-o/)
+-  endif()
+-endif()
+-
+ # Process LLVM.
+ include(llvm)
+ 
+-- 
+2.33.0
+
