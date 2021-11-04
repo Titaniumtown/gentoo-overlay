@@ -1355,12 +1355,12 @@ unipatch() {
 					PATCH_DEPTH=$((${PATCH_DEPTH} + 1))
 				fi
 			done
-			if [ ${PATCH_DEPTH} -eq 5 ]; then
-				eerror "Failed to dry-run patch ${i/*\//}"
-				eerror "Please attach ${STDERR_T} to any bug you may post."
-				eshopts_pop
-				die "Unable to dry-run patch on any patch depth lower than 5."
-			fi
+			#if [ ${PATCH_DEPTH} -eq 5 ]; then
+			#	eerror "Failed to dry-run patch ${i/*\//}"
+			#	eerror "Please attach ${STDERR_T} to any bug you may post."
+			#	eshopts_pop
+			#	die "Unable to dry-run patch on any patch depth lower than 5."
+			#fi
 		done
 	done
 
